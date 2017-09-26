@@ -3,6 +3,7 @@
 执行方式在项目根目录执行mvn jfx:jar进行打包;jar打包为jar包native打包为系统安装软件;<br/>
 ```html
 mvn jfx:jar
+编译后进入target/jfx/app/ 双击执行MyBatis-CMEU-jfx.jar  或者 java -jar MyBatis-CMEU-jfx.jar
 ```
 # 运行环境要求
 本软件使用javafx8进行开发,已知特效最低要求为1.8_40,作者开发环境为1.8_121;<br/>
