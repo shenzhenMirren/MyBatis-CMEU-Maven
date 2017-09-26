@@ -4,10 +4,10 @@
 
 	<groupId>com.mybatiscmeu</groupId>
 	<artifactId>MyBatis-CMEU-Maven</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>2.1.2</version>
 	<packaging>jar</packaging>
 
-	<name>MyBatis-CMEU-Maven</name>
+	<name>MyBatis-CMEU</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -22,6 +22,12 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- CMEU依赖架包 -->
+		<!-- 日 志处理 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.25</version>
+		</dependency>
 		<!-- 用于保存配置相关的数据库驱动架包 -->
 		<dependency>
 			<groupId>org.xerial</groupId>
@@ -32,7 +38,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.38</version>
+			<version>1.2.7</version>
 		</dependency>
 
 		<!-- 自定义数据库驱动架包 -->
@@ -61,5 +67,19 @@
 			<version>5.1.38</version>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.zenjava</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>8.8.3</version>
+				<configuration>
+					<mainClass>pers.cmeu.Main</mainClass>
+					<vendor>MyBatis-CMEU</vendor>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>MyBatis-CMEU</finalName>
+	</build>
 
 </project>
