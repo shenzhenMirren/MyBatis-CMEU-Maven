@@ -8,7 +8,6 @@ mvn jfx:jar
 本软件使用javafx8进行开发,已知特效最低要求为1.8_40,作者开发环境为1.8_121;<br/>
 
 # 软件使用说明
-[MyBatis-CMEU使用说明书](http://mybatiscmeu.com/)<br/>
 [MyBatis-CMEU的使用帮助文档](https://shenzhenmirren.github.io/MyBatis-CMEU-DOC/)<br/>
 # MyBatis-CMEU-原版
 
