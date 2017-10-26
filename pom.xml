@@ -58,13 +58,13 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.4.1212</version>
+			<version>42.0.0</version>
 		</dependency>
 		<!-- MySql驱动架包 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.38</version>
+			<version>5.1.40</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -76,6 +76,8 @@
 				<configuration>
 					<mainClass>pers.cmeu.Main</mainClass>
 					<vendor>MyBatis-CMEU</vendor>
+					<verbose>false</verbose>
+					<jfxMainAppJarName>MyBatis-CMEU.jar</jfxMainAppJarName>
 				</configuration>
 			</plugin>
 		</plugins>
