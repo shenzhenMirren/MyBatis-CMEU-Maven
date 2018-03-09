@@ -30,7 +30,19 @@ public class DBUtil {
 		DBType dbType = DBType.valueOf(config.getDbType());
 		Class.forName(dbType.getDriverClass());
 		String url = getConnectionURL(config);
-		return DriverManager.getConnection(url, config.getUserName(), config.getUserPwd());
+		if (dbType == DBType.Oracle) {
+			Connection connection;
+			try {
+				connection = DriverManager.getConnection(url, config.getUserName(), config.getUserPwd());
+			} catch (Exception e) {
+				String oracle = String.format(DBType.OracleServiceName.getConnectionUrlPattern(), config.getConnURL(),
+						config.getListenPort(), config.getDbName());
+				connection = DriverManager.getConnection(oracle, config.getUserName(), config.getUserPwd());
+			}
+			return connection;
+		} else {
+			return DriverManager.getConnection(url, config.getUserName(), config.getUserPwd());
+		}
 	}
 
 	/**
